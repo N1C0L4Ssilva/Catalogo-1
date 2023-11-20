@@ -69,11 +69,7 @@ nav .Direcionais .SpanDirecional{
 .ButtonOpenMenu input[type="checkbox"]:checked ~ span{
     height:0;
 }
-.ButtonOpenMenu:has(input[type="checkbox"]:checked) + .Direcionais{
-    display: inline;
-}
-
-
+.ButtonOpenMenu:has(input[type="checkbox"]:checked) + .Direcionais{ display: inline }
 .Usuario button{
     position: absolute;
     right: 5px;
@@ -91,9 +87,14 @@ footer .LogoMarca img{
     margin-bottom: 20px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
     .MarkerCatalogo span{
         justify-content: space-around;
+    }
+    .MarkerCatalogo > div{
+        max-height: 510px;
+        flex-direction: column;
+        overflow-x: auto;
     }
     footer .RedesSociais{
         flex-direction: column;

@@ -60,9 +60,7 @@ nav .Usuario{
     height: 100%;
     min-width: 10%;
 }
-nav .LogoMarca img{
-    height: 100%;
-}
+nav .LogoMarca img{height: 100%;}
 .Usuario button span{
     padding: 10px;
     background: linear-gradient(122deg,
@@ -88,9 +86,7 @@ nav .LogoMarca img{
 }
 
 /* CATALOGO */
-::-webkit-scrollbar{
-    display: none;
-}
+body::-webkit-scrollbar{width: 0px}
 .Catalogo{
     display: flex;
     flex-wrap: wrap;
@@ -114,9 +110,12 @@ nav .LogoMarca img{
     font-family: cursive;
     background-color: var(--CorDeFundo);
 }
-.MarkerCatalogo div{
+.MarkerCatalogo > div{
     display: flex;
     flex-wrap: wrap;
+}
+.MarkerCatalogo div::-webkit-scrollbar{
+    width: 5px;
 }
 /* CARD */
 

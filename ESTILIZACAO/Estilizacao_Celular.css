@@ -1,0 +1,115 @@
+nav .LogoMarca{min-width: 50%;}
+.Direcionais{
+    position: absolute;
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+    height: calc(100% - 50px);
+    background-color: var(--MenuCelular);
+    z-index: 3;
+}
+nav .Direcionais .SpanDirecional{
+    margin: 10px 10px 0px 10px;
+    padding: 5px;
+    height: 25px;
+    width: calc(100% - 30px);
+}
+
+/* ABRIR MENU LATERAL */
+.ButtonOpenMenu{
+    position: absolute;
+    right: 65px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ButtonOpenMenu input[type="checkbox"]{
+    width: 25px;
+    height: 25px;
+    z-index: 3;
+    opacity: 0;
+}
+.ButtonOpenMenu span{
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--ButtonOpenMenu);
+}
+.ButtonOpenMenu span::before{
+    position: absolute;
+    content: "";
+    top: 8px;
+    width: 20px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--ButtonOpenMenu);
+    transition: .2s;
+}
+.ButtonOpenMenu span::after{
+    position: absolute;
+    content: "";
+    bottom: 8px;
+    width: 20px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--ButtonOpenMenu);
+    transition: .2s;
+}
+.ButtonOpenMenu input[type="checkbox"]:checked ~ span::before{
+    top:-1.5px;
+    transform: rotate(45deg);
+}
+.ButtonOpenMenu input[type="checkbox"]:checked ~ span::after{
+    bottom:-1.5px;
+    transform: rotate(-45deg);
+}
+.ButtonOpenMenu input[type="checkbox"]:checked ~ span{
+    height:0;
+}
+.ButtonOpenMenu:has(input[type="checkbox"]:checked) + .Direcionais{
+    display: inline;
+}
+
+
+.Usuario button{
+    position: absolute;
+    right: 5px;
+    border: 0;
+    background-color: transparent;
+    margin-top: 3px;
+}
+
+.Usuario button{height:50px;width:50px;}
+.Usuario button img{display: inline;}
+.Usuario button span{display: none;}
+
+footer .LogoMarca img{
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .MarkerCatalogo span{
+        justify-content: space-around;
+    }
+    footer .RedesSociais{
+        flex-direction: column;
+        justify-content: start;
+    }
+    footer .RedesSociais a{
+        margin-top: 5px;
+    } 
+    footer .RedesSociais a img{
+        width: 30px;
+        height: 30px;
+        filter:contrast(0%);
+    }
+    footer .OutrosDados{width: 70%;
+    }
+    footer .LogoMarca{display: none;}
+}
+
+

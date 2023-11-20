@@ -10,76 +10,90 @@
 </head>
 <body>
     <nav>
-        <div class="LogoMarca"> <!-- NOME DA MARCA -->
+        <div class="LogoMarca">
             <img src="./IMAGENS/Logo.png" alt="">
         </div>
         <div class="ButtonOpenMenu">
-            <input type="checkbox">
+            <input type="checkbox" id="CheckBoxOpenMenu">
             <span></span>
         </div>
         <div class="Direcionais">
-            <a class="SpanDirecional">DIRECIONAL</a>
-            <a class="SpanDirecional">DIRECIONAL</a>
-            <a class="SpanDirecional">DIRECIONAL</a>
-            <a class="SpanDirecional">DIRECIONAL</a>
+            <a href="Paginas/ESSENCIAS/index.html" class="SpanDirecional">ESSENCIAS</a>
+            <a href="Paginas/BEBIDAS/index.html" class="SpanDirecional">BEBIDAS</a>
         </div>
-        <!-- <div class="Usuario">
-            <button>
-                <span>CONTA</span>
-                <img src="IMAGENS/Icone_Conta.png" alt="">
-            </button>
-        </div> --><!-- LOGIN/REGISTER -->
     </nav>
-    <main class="Catalogo"> <!-- AREA DOS ITENS PARA CATALOGO -->
-        <div class="MarkerCatalogo"> <!-- MARCADOR -->
-            <label class="TextoMarcador">Marcador [Card com valor unico]</label>
-            <!-- ITENS CARD -->
+    <main class="Catalogo">
+        <div class="MarkerCatalogo"> 
+            <span class="TextoMarcador"> NOVIDADES [Card com valor unico] </span>
             <div>
                 <div class="card">
                     <img src="IMAGENS/NoItem.png" alt="">
-                    <label class="TextoSeNaoImg"></label>
-                    <label class="Titulo">ITEM NUMERO 1</label>
-                    <label class="Valor">0,12</label>
+                    <span class="TextoSeNaoImg"></span>
+                    <span class="Titulo">ITEM NUMERO 1</span>
+                    <span class="Valor">0,12</span>
                 </div>
                 <div class="card">
-                    <label class="TextoSeNaoImg">CARD SEM IMAGEM</label>
-                    <label class="Titulo">ITEM NUMERO 2</label>
-                    <label class="Valor">0,12</label>
+                    <span class="TextoSeNaoImg">CARD SEM IMAGEM</span>
+                    <span class="Titulo">ITEM NUMERO 2</span>
+                    <span class="Valor">0,12</span>
                 </div>
             </div>
         </div>
-        <div class="MarkerCatalogo"> <!-- MARCADOR -->
-            <label class="TextoMarcador">Marcador [Card com desconto por quantidade]</label>
+        <div class="MarkerCatalogo"> 
+            <span class="TextoMarcador"> COMBOS [Card com desconto por quantidade]</span>
             <div>
                 <div class="card">
                     <img src="IMAGENS/NoItem.png" alt="">
-                    <label class="TextoSeNaoImg"></label>
-                    <label class="Titulo">ITEM NUMERO 1</label>
-                    <label class="Valor">2,34</label>
-                    <label class="DescontoQuant">3 por 4,56</label>
+                    <span class="TextoSeNaoImg"></span>
+                    <span class="Titulo">ITEM NUMERO 1</span>
+                    <span class="Valor">2,34</span>
+                    <span class="DescontoQuant">3 por 4,56</span>
                 </div>
                 <div class="card">
-                    <label class="TextoSeNaoImg">CARD SEM IMAGEM</label>
-                    <label class="Titulo">ITEM NUMERO 2</label>
-                    <label class="Valor">2,34</label>
-                    <label class="DescontoQuant">3 por 4,56</label>
+                    <span class="TextoSeNaoImg">CARD SEM IMAGEM</span>
+                    <span class="Titulo">ITEM NUMERO 2</span>
+                    <span class="Valor">2,34</span>
+                    <span class="DescontoQuant">3 por 4,56</span>
                 </div>
             </div>
         </div>
-        <div class="MarkerCatalogo"> <!-- MARCADOR -->
-            <label class="TextoMarcador">Marcador [Card com Promoção]</label>
+        <div class="MarkerCatalogo"> 
+            <span class="TextoMarcador"> PROMOÇÕES [Card com Promoção]</span>
             <div>
                 <div class="card">
                     <img src="IMAGENS/NoItem.png" alt="">
-                    <label class="Titulo">ITEM NUMERO 1</label>
-                    <label class="Promocao" style="order: 99;" >6,78</label>
-                    <label class="Valor">8,90</label>
+                    <span class="Titulo">ITEM NUMERO 1</span>
+                    <span class="Promocao" style="order: 99;" >6,78</span>
+                    <span class="Valor">8,90</span>
                 </div>
                 <div class="card">
-                    <label class="TextoSeNaoImg">CARD SEM IMAGEM</label>
-                    <label class="Titulo">ITEM NUMERO 1</label>
-                    <label class="Promocao" style="order: 99;" >6,78</label>
-                    <label class="Valor">8,90</label>
+                    <span class="TextoSeNaoImg">CARD SEM IMAGEM</span>
+                    <span class="Titulo">ITEM NUMERO 1</span>
+                    <span class="Promocao" style="order: 99;" >6,78</span>
+                    <span class="Valor">8,90</span>
+                </div>
+            </div>
+        </div>
+        <div class="MarkerCatalogo"> 
+            <span class="TextoMarcador"> Marcador [Card Texto ESGOTADO]</span>
+            <div>
+                <div class="card">
+                    <div class="Esgotado">
+                        <span>ESGOTADO</span>
+                    </div>
+                    <img src="IMAGENS/NoItem.png" alt="">
+                    <span class="Titulo">ITEM NUMERO 1</span>
+                    <span class="Promocao" style="order: 99;" >6,78</span>
+                    <span class="Valor">8,90</span>
+                </div>
+                <div class="card">
+                    <div class="Esgotado">
+                        <span>ESGOTADO</span>
+                    </div>
+                    <span class="TextoSeNaoImg">CARD SEM IMAGEM</span>
+                    <span class="Titulo">ITEM NUMERO 1</span>
+                    <span class="Promocao" style="order: 99;" >6,78</span>
+                    <span class="Valor">8,90</span>
                 </div>
             </div>
         </div>
@@ -87,7 +101,7 @@
     <footer>
         <p>&copy; 2023 CATALOGO TESTE</p>
         <div class="DadosLoja">
-            <div class="LogoMarca"> <!-- NOME DA MARCA -->
+            <div class="LogoMarca">
                 <img src="./IMAGENS/Logo.png" alt="">
             </div>
             <div class="RedesSociais">

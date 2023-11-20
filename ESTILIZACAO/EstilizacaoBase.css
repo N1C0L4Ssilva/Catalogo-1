@@ -15,6 +15,7 @@ span{font-weight: bold;}
     --ButtonOpenMenu:rgb(0,0,0);
     --CorDeFundo:#ffffff;
 }
+
 html{
     scroll-behavior: smooth;
 }

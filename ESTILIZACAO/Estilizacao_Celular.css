@@ -36,7 +36,7 @@ nav .Direcionais .SpanDirecional{
     width: 20px;
     height: 3px;
     border-radius: 10px;
-    background-color: var(--ButtonOpenMenu);
+    background-image: url(../IMAGENS/BarrinhaCelular.png);
 }
 .ButtonOpenMenu span::before{
     position: absolute;
@@ -45,7 +45,7 @@ nav .Direcionais .SpanDirecional{
     width: 20px;
     height: 3px;
     border-radius: 10px;
-    background-color: var(--ButtonOpenMenu);
+    background-image: url(../IMAGENS/BarrinhaCelular.png);
     transition: .2s;
 }
 .ButtonOpenMenu span::after{
@@ -55,7 +55,7 @@ nav .Direcionais .SpanDirecional{
     width: 20px;
     height: 3px;
     border-radius: 10px;
-    background-color: var(--ButtonOpenMenu);
+    background-image: url(../IMAGENS/BarrinhaCelular.png);
     transition: .2s;
 }
 .ButtonOpenMenu input[type="checkbox"]:checked ~ span::before{

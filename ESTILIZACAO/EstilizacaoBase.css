@@ -1,114 +1,253 @@
-nav .LogoMarca{min-width: 50%;}
-.Direcionais{
-    position: absolute;
-    display: none;
-    width: 100%;
-    margin-top: 50px;
-    height: calc(100% - 50px);
-    background-color: var(--MenuCelular);
-    z-index: 3;
-}
-nav .Direcionais .SpanDirecional{
-    margin: 10px 10px 0px 10px;
-    padding: 5px;
-    height: 25px;
-    width: calc(100% - 30px);
+*{margin: 0;padding: 0;}
+@font-face {
+    font-family: "KdamThmorPro";
+    src: url("/HTML_CATALOGO_SIMPLES/FONTS/KdamThmorPro-Regular.ttf") format("truetype");
 }
 
-/* ABRIR MENU LATERAL */
-.ButtonOpenMenu{
-    position: absolute;
-    right: 20px;
+span{font-weight: bold;}
+
+:root{
+    --NavBar:rgb(97, 108, 97);
+    --BotaoNavBar:rgb(125,125,125);
+    --Card:rgb(200,180,180);
+    --BorderCard:rgb(180,160,160);
+    --MenuCelular:rgb(0,0,0,.9);
+    --ButtonOpenMenu:rgb(0,0,0);
+    --CorDeFundo:#ffffff;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--CorDeFundo);
+}
+
+/* NAVBAR */
+nav{
+    width: 100%;
     height: 50px;
+    background-color:var(--NavBar);
+    display: flex;
+}
+nav .LogoMarca{
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.ButtonOpenMenu input[type="checkbox"]{
-    width: 25px;
-    height: 25px;
-    z-index: 3;
-    opacity: 0;
+
+.ButtonOpenMenu{
+    display:none ;
+    content: attr(value=false);
 }
-.ButtonOpenMenu span{
-    position: absolute;
-    display: block;
-    width: 20px;
-    height: 3px;
+/* NAV DIRECIONAIS */
+
+nav .Direcionais .SpanDirecional{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: fit-content;
+    background-color: rgb(255,255,255,.125);
+}
+
+/* NAV LOGIN/REGISTER BUTTON */
+nav .Usuario{
+    height: 100%;
+    min-width: 10%;
+}
+nav .LogoMarca img{height: 100%;}
+.Usuario button span{
+    padding: 10px;
+    background: linear-gradient(122deg,
+        rgba(91,82,255,1) 0%,
+        rgba(219,75,211,1) 25%,
+        rgba(236,41,41,1) 50%,
+        rgba(255,176,64,1) 75%,
+        rgba(255,248,0,1) 100%
+    );
     border-radius: 10px;
-    background-color: var(--ButtonOpenMenu);
 }
-.ButtonOpenMenu span::before{
-    position: absolute;
-    content: "";
-    top: 8px;
-    width: 20px;
-    height: 3px;
-    border-radius: 10px;
-    background-color: var(--ButtonOpenMenu);
-    transition: .2s;
-}
-.ButtonOpenMenu span::after{
-    position: absolute;
-    content: "";
-    bottom: 8px;
-    width: 20px;
-    height: 3px;
-    border-radius: 10px;
-    background-color: var(--ButtonOpenMenu);
-    transition: .2s;
-}
-.ButtonOpenMenu input[type="checkbox"]:checked ~ span::before{
-    top:-1.5px;
-    transform: rotate(45deg);
-}
-.ButtonOpenMenu input[type="checkbox"]:checked ~ span::after{
-    bottom:-1.5px;
-    transform: rotate(-45deg);
-}
-.ButtonOpenMenu input[type="checkbox"]:checked ~ span{
-    height:0;
-}
-.ButtonOpenMenu:has(input[type="checkbox"]:checked) + .Direcionais{ display: inline }
 .Usuario button{
-    position: absolute;
-    right: 5px;
-    border: 0;
-    background-color: transparent;
-    margin-top: 3px;
+    height:40px;
+    width:100px;
+    margin: 5px 5px 10px 5px;
+    padding: 5px;
+    background-color: rgb(255,255,255,.125);
+    border-radius: 10px;
+}
+.Usuario button img{
+    width: 40px !important;
+    height: 40px !important;
 }
 
-.Usuario button{height:50px;width:50px;}
-.Usuario button img{display: inline;}
-.Usuario button span{display: none;}
+/* CATALOGO */
+body::-webkit-scrollbar{width: 0px}
+.Catalogo{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* MARCADOR */
+.MarkerCatalogo{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 10px 10px;
+    border: 1px solid black;
+    width: 100%;
+}
+.MarkerCatalogo .TextoMarcador{
+    position: relative;
+    height: 20px;
+    width: fit-content;
+    top: -12.5px;
+    left: 10px;
+    padding: 0 10px;
+    color: black;
+    font-family: math;
+    background-color: var(--CorDeFundo);
+}
+.MarkerCatalogo > div{
+    display: flex;
+    flex-wrap: wrap;
+}
+.MarkerCatalogo div::-webkit-scrollbar{
+    width: 5px;
+}
+/* CARD */
 
+.card{
+    margin: 5px 0px 5px 7px;
+    position: relative;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 1px 1px 8px rgb(0,0,0,.5);
+    width: 150px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.card img{width: 150px;height: 150px;}
+.card img ~ .TextoSeNaoImg{display: none;}
+.card .TextoSeNaoImg{
+    width: 150px;
+    height: 150px;
+    border: 1px dashed gray;
+    text-align: center;
+}
+.card .Valor{
+    color: green;
+    font-family: cursive;
+}
+.card .DescontoQuant{
+    color: green;
+    font-size: 75%;
+    font-family: cursive;
+}
+.card .Promocao{
+    color: green;
+    font-family: cursive;
+}
+.card .Promocao ~ .Valor{
+    color: rgb(128, 0, 0);
+    font-size: 75%;
+    font-family: cursive;
+}
+.card .Promocao ~ .Valor::after{
+    content: "";
+    position: relative;
+    display: flex;
+    bottom: 8.5px;
+    width: 25px;
+    height: 2px;
+    background-color: red;
+    transform: rotate(10deg);
+}
+.card .Esgotado{
+    position: absolute;
+    width:calc(100% - 10px);
+    height:calc(100% - 10px);
+    background-color:rgb(127,127,127,.8);
+    border-radius: 10px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    z-index:1;
+}
+.card .Esgotado span{
+    transform: rotate(335deg);
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+
+}
+
+.card button{
+    width: 75%;
+    border: 0;
+    border-radius: 10px;
+    font-weight: bold;
+    color: wheat;
+    padding: 3px;
+    background-color: blue;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    height: 150px;
+}
+footer .DadosLoja{
+    display: flex;
+    margin-top: 5px;
+    height: calc(100% - 30px);
+}
+footer .LogoMarca,footer .RedesSociais,footer .OutrosDados {
+    width: 33.333%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
 footer .LogoMarca img{
-    width: 80%;
+    width: calc(50% - 40px);
     margin-bottom: 20px;
 }
+footer .RedesSociais *{
+    border-radius: 10px;
+    display: flex;
+}
+footer .RedesSociais a img{
+    width: 50px;
+    height: 50px;
+    filter:contrast(0%);
+}
+footer .RedesSociais .Face{
+    background: linear-gradient(134deg,
+        rgba(1,82,180,1) 0%,
+        rgba(0,20,65,1) 100%
+    );
+}
+footer .RedesSociais .Insta{
+    background: linear-gradient(122deg,
+        rgba(91,82,255,1) 0%,
+        rgba(219,75,211,1) 25%,
+        rgba(236,41,41,1) 50%,
+        rgba(255,176,64,1) 75%,
+        rgba(255,248,0,1) 100%
+    );
 
-@media screen and (max-width: 540px) {
-    .MarkerCatalogo span{
-        justify-content: space-around;
-    }
-    .MarkerCatalogo > div{
-        max-height: 510px;
-        flex-direction: column;
-        overflow-x: auto;
-    }
-    footer .RedesSociais{
-        flex-direction: column;
-        justify-content: start;
-    }
-    footer .RedesSociais a{
-        margin-top: 5px;
-    } 
-    footer .RedesSociais a img{
-        width: 30px;
-        height: 30px;
-        filter:contrast(0%);
-    }
-    footer .OutrosDados{width: 70%;
-    }
-    footer .LogoMarca{display: none;}
+}
+footer .RedesSociais .Zap{
+    background: linear-gradient(134deg,
+        rgb(131,200,118) 0%,
+        rgba(0,65,11,1) 100%
+    );
 }
